@@ -12,6 +12,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-riveanimatedapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-riveanimatedapp.a */; };
+		A07298CB284117E00040EF57 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C4284117E00040EF57 /* house.riv */; };
+		A07298CC284117E00040EF57 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C5284117E00040EF57 /* check.riv */; };
+		A07298CD284117E00040EF57 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C6284117E00040EF57 /* confetti.riv */; };
+		A07298CE284117E00040EF57 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C7284117E00040EF57 /* icons.riv */; };
+		A07298CF284117E00040EF57 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C8284117E00040EF57 /* button.riv */; };
+		A07298D0284117E00040EF57 /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298C9284117E00040EF57 /* menu_button.riv */; };
+		A07298D1284117E00040EF57 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = A07298CA284117E00040EF57 /* shapes.riv */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
@@ -27,6 +34,13 @@
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-riveanimatedapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-riveanimatedapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-riveanimatedapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riveanimatedapp.debug.xcconfig"; path = "Target Support Files/Pods-riveanimatedapp/Pods-riveanimatedapp.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-riveanimatedapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riveanimatedapp.release.xcconfig"; path = "Target Support Files/Pods-riveanimatedapp/Pods-riveanimatedapp.release.xcconfig"; sourceTree = "<group>"; };
+		A07298C4284117E00040EF57 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
+		A07298C5284117E00040EF57 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
+		A07298C6284117E00040EF57 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
+		A07298C7284117E00040EF57 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		A07298C8284117E00040EF57 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
+		A07298C9284117E00040EF57 /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
+		A07298CA284117E00040EF57 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = riveanimatedapp/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -48,6 +62,7 @@
 		13B07FAE1A68108700A75B9A /* riveanimatedapp */ = {
 			isa = PBXGroup;
 			children = (
+				A07298C3284117920040EF57 /* Assets */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -107,6 +122,20 @@
 			name = riveanimatedapp;
 			sourceTree = "<group>";
 		};
+		A07298C3284117920040EF57 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A07298C8284117E00040EF57 /* button.riv */,
+				A07298C5284117E00040EF57 /* check.riv */,
+				A07298C6284117E00040EF57 /* confetti.riv */,
+				A07298C4284117E00040EF57 /* house.riv */,
+				A07298C7284117E00040EF57 /* icons.riv */,
+				A07298C9284117E00040EF57 /* menu_button.riv */,
+				A07298CA284117E00040EF57 /* shapes.riv */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +176,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				87743BE3173694359D14364E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,9 +223,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07298CC284117E00040EF57 /* check.riv in Resources */,
+				A07298CD284117E00040EF57 /* confetti.riv in Resources */,
+				A07298CE284117E00040EF57 /* icons.riv in Resources */,
+				A07298CB284117E00040EF57 /* house.riv in Resources */,
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				A07298D1284117E00040EF57 /* shapes.riv in Resources */,
+				A07298CF284117E00040EF57 /* button.riv in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				A07298D0284117E00040EF57 /* menu_button.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +293,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-riveanimatedapp/Pods-riveanimatedapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87743BE3173694359D14364E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-riveanimatedapp/Pods-riveanimatedapp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/RiveRuntime/RiveRuntime.framework/RiveRuntime",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RiveRuntime.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-riveanimatedapp/Pods-riveanimatedapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
