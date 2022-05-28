@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.View<ContainerProps>`
   width: 90%;
   height: 110px;
-  border-radius: 20px;
+  border-radius: 30px;
   margin-bottom: 20px;
   align-self: center;
   padding: 26px 30px;
@@ -30,7 +30,7 @@ export const Title = styled.Text`
 
 export const Subtitle = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
-  color: ${({ theme }) => theme.colors.subtitle};
+  color: white;
   font-size: 15px;
 `;
 

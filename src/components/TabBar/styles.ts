@@ -1,21 +1,42 @@
+import Animated from "react-native-reanimated";
+import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 
 interface ButtonProps {
   selected: boolean;
 }
 
-export const Container = styled.View`
-  height: 60px;
+export const Container = styled(Animated.View)`
   width: 90%;
+  position: absolute;
+  bottom: 25px;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+`;
+
+export const Shadow = styled(LinearGradient).attrs({
+  colors: ["rgba(255, 255,255, 0)", "rgba(255, 255,255, 1)"],
+})`
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  align-self: center;
+  opacity: ${({ openMenu }) => (openMenu ? 0 : 1)};
+`;
+
+export const Content = styled.View`
+  height: 60px;
+  width: 100%;
   background: ${({ theme }) => theme.colors.primary};
   border-radius: 22px;
-  position: absolute;
-  bottom: 30px;
-  align-self: center;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 20px 20px 20px white;
+  shadow-opacity: 0.3;
+  shadow-radius: 20px;
+  shadow-color: ${({ theme }) => theme.colors.bottomShadow};
+  shadow-offset: 0px 20px;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({ activeOpacity: 0.5 })`

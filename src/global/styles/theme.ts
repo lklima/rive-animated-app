@@ -13,7 +13,7 @@ export default {
     purple: "#6E6AE8",
     purpleVariant: "#7553F6",
     blueVariant: "#80A4FF",
-    stroke: "#007AFF",
+    stroke: "#6792FF",
   },
 
   fonts: {

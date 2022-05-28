@@ -27,8 +27,3 @@ export const Button = styled.TouchableOpacity.attrs({ activeOpacity: 0.5 })`
   background: white;
   box-shadow: 0 5px 5px rgba(74, 83, 103, 0.2);
 `;
-
-export const Icon = styled.Image`
-  width: 24px;
-  height: 24px;
-`;

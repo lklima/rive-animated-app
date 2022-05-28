@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import Rive, { RiveRef } from "rive-react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-import { Button, Container, Icon, MenuButton } from "./styles";
-
-import user from "../../../../assets/icons/user.png";
+import { Button, Container, MenuButton } from "./styles";
 
 interface Props {
   openMenu: boolean;
@@ -34,7 +33,7 @@ export default function Header({ openMenu, setIsOpenMenu }: Props) {
         />
       </MenuButton>
       <Button>
-        <Icon source={user} />
+        <Ionicons name="ios-person-outline" size={20} />
       </Button>
     </Container>
   );

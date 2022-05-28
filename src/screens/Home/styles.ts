@@ -1,8 +1,16 @@
+import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
+  background: ${({ theme }) => theme.colors.primaryDark};
+  justify-content: center;
+`;
+
+export const Content = styled(Animated.View)`
+  flex: 1;
   background: ${({ theme }) => theme.colors.background};
+  border-radius: 30px;
 `;
 
 export const ScrollView = styled.ScrollView`
@@ -20,7 +28,7 @@ export const SubTitle = styled.Text`
   font-size: 20px;
   font-family: ${({ theme }) => theme.fonts.bold};
   margin-left: 24px;
-  margin-top: 31px;
+  margin-top: 18px;
   margin-bottom: 10px;
 `;
 

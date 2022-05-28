@@ -1,11 +1,26 @@
 import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 
-export const Container = styled(LinearGradient)`
+interface ContainerProps {
+  color: string;
+}
+
+export const Container = styled.View<ContainerProps>`
+  shadow-opacity: 0.6;
+  shadow-radius: 8px;
+  shadow-color: ${({ color }) => color};
+  shadow-offset: 0px 10px;
+  background: white;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-bottom: 22px;
+`;
+
+export const Gradient = styled(LinearGradient)`
   width: 260px;
   height: 309px;
   border-radius: 30px;
-  margin-left: 20px;
+
   padding: 30px;
   justify-content: space-between;
 `;
@@ -37,7 +52,7 @@ export const Caption = styled.Text`
   color: ${({ theme }) => theme.colors.subtitle};
   font-size: 13px;
   text-transform: uppercase;
-  margin-top: 5px;
+  margin-top: 8px;
 `;
 
 export const Icon = styled.Image`
