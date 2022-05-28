@@ -1,18 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { useState } from "react";
-import { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
+import React, { useState, useRef } from "react";
 import Rive, { LoopMode, RiveRef } from "rive-react-native";
 
-import { Button, ButtonContent, Container, Highlight } from "./styles";
+import Highlight from "./components/Highlight";
+
+import { Button, ButtonContent, Container } from "./styles";
 
 export default function TabBar() {
   const [selected, setSelected] = useState("chat");
-
-  const stroke1Width = useSharedValue(22);
-  const stroke2Width = useSharedValue(22);
-  const stroke3Width = useSharedValue(22);
-  const stroke4Width = useSharedValue(22);
-  const stroke5Width = useSharedValue(22);
 
   const chatRef = useRef<RiveRef>(null);
   const searchRef = useRef<RiveRef>(null);
@@ -36,34 +30,10 @@ export default function TabBar() {
     setSelected(name);
   }
 
-  useEffect(() => {
-    stroke1Width.value = withTiming(selected === "chat" ? 22 : 0);
-    stroke2Width.value = withTiming(selected === "search" ? 22 : 0);
-    stroke3Width.value = withTiming(selected === "timer" ? 22 : 0);
-    stroke4Width.value = withTiming(selected === "bell" ? 22 : 0);
-    stroke5Width.value = withTiming(selected === "user" ? 22 : 0);
-  }, [selected]);
-
-  const stroke1Style = useAnimatedStyle(() => ({
-    width: stroke1Width.value,
-  }));
-  const stroke2Style = useAnimatedStyle(() => ({
-    width: stroke2Width.value,
-  }));
-  const stroke3Style = useAnimatedStyle(() => ({
-    width: stroke3Width.value,
-  }));
-  const stroke4Style = useAnimatedStyle(() => ({
-    width: stroke4Width.value,
-  }));
-  const stroke5Style = useAnimatedStyle(() => ({
-    width: stroke5Width.value,
-  }));
-
   return (
     <Container>
       <Button onPress={() => handlePress("chat")}>
-        <Highlight style={stroke1Style} />
+        <Highlight selected={selected === "chat"} />
         <ButtonContent selected={selected === "chat"}>
           <Rive
             ref={chatRef}
@@ -75,7 +45,7 @@ export default function TabBar() {
         </ButtonContent>
       </Button>
       <Button onPress={() => handlePress("search")}>
-        <Highlight style={stroke2Style} />
+        <Highlight selected={selected === "search"} />
         <ButtonContent selected={selected === "search"}>
           <Rive
             ref={searchRef}
@@ -87,7 +57,7 @@ export default function TabBar() {
         </ButtonContent>
       </Button>
       <Button onPress={() => handlePress("timer")}>
-        <Highlight style={stroke3Style} />
+        <Highlight selected={selected === "timer"} />
         <ButtonContent selected={selected === "timer"}>
           <Rive
             ref={timerRef}
@@ -99,7 +69,7 @@ export default function TabBar() {
         </ButtonContent>
       </Button>
       <Button onPress={() => handlePress("bell")}>
-        <Highlight style={stroke4Style} />
+        <Highlight selected={selected === "bell"} />
         <ButtonContent selected={selected === "bell"}>
           <Rive
             ref={bellRef}
@@ -111,7 +81,7 @@ export default function TabBar() {
         </ButtonContent>
       </Button>
       <Button onPress={() => handlePress("user")}>
-        <Highlight style={stroke5Style} />
+        <Highlight selected={selected === "user"} />
         <ButtonContent selected={selected === "user"}>
           <Rive
             ref={userRef}

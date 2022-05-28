@@ -3,6 +3,9 @@ export default {
     primary: "#394156",
     primaryDark: "#17203A",
 
+    background: "#EEF1F8",
+    subtitle: "rgba(255, 255, 255, 0.5)",
+
     bottomShadow: "rgba(23, 32, 58. 0.3)",
 
     pink: "#F77D8E",
@@ -11,5 +14,11 @@ export default {
     purpleVariant: "#7553F6",
     blueVariant: "#80A4FF",
     stroke: "#007AFF",
+  },
+
+  fonts: {
+    regular: "regular",
+    semiBold: "semiBold",
+    bold: "bold",
   },
 };

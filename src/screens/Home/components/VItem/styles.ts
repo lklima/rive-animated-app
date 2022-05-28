@@ -1,0 +1,48 @@
+import { LinearGradient } from "expo-linear-gradient";
+import styled from "styled-components/native";
+
+export const Container = styled(LinearGradient)`
+  width: 260px;
+  height: 309px;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 30px;
+  justify-content: space-between;
+`;
+
+export const Header = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Content = styled.View`
+  width: 100%;
+`;
+
+export const Title = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.bold};
+  color: white;
+  font-size: 24px;
+`;
+
+export const Subtitle = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.subtitle};
+  font-size: 15px;
+  margin-top: 7px;
+`;
+
+export const Caption = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.semiBold};
+  color: ${({ theme }) => theme.colors.subtitle};
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 5px;
+`;
+
+export const Icon = styled.Image`
+  height: 44px;
+  width: 44px;
+`;
+
+export const Avatars = styled.Image``;
