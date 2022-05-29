@@ -8,9 +8,10 @@ import { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reani
 interface Props {
   openMenu: boolean;
   setIsOpenMenu(openMenu: boolean): void;
+  setOpenOnboardModal(openMenu: boolean): void;
 }
 
-export default function Header({ openMenu, setIsOpenMenu }: Props) {
+export default function Header({ openMenu, setIsOpenMenu, setOpenOnboardModal }: Props) {
   const containerTranlateX = useSharedValue(0);
 
   const menuRef = useRef<RiveRef>(null);
@@ -35,7 +36,7 @@ export default function Header({ openMenu, setIsOpenMenu }: Props) {
           autoplay={false}
         />
       </MenuButton>
-      <Button>
+      <Button onPress={() => setOpenOnboardModal(true)}>
         <Ionicons name="ios-person-outline" size={20} />
       </Button>
     </Container>

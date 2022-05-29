@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
-import { withAnchorPoint } from "react-native-anchor-point";
 
 import TabBar from "../../components/TabBar";
 import Header from "./components/Header";
 import HItem from "./components/HItem";
 import VItem from "./components/VItem";
+import SideBar from "../../components/SideBar";
 
 import * as S from "./styles";
+
 import { hItems, vItems } from "./utils";
-import SideBar from "../../components/SideBar";
+import OnboardModal from "./components/OnboardModal";
 
 export default function Home() {
   const contentRotateY = useSharedValue(0);
@@ -18,6 +19,7 @@ export default function Home() {
   const contentScale = useSharedValue(0);
 
   const [openMenu, setOpenMenu] = useState(false);
+  const [openOnboardModal, setOpenOnboardModal] = useState(false);
 
   useEffect(() => {
     const options = { damping: 14 };
@@ -40,7 +42,11 @@ export default function Home() {
 
   return (
     <S.Container>
-      <Header openMenu={openMenu} setIsOpenMenu={setOpenMenu} />
+      <Header
+        openMenu={openMenu}
+        setIsOpenMenu={setOpenMenu}
+        setOpenOnboardModal={setOpenOnboardModal}
+      />
       <SideBar openMenu={openMenu} />
       <S.Content style={[animatedContentSyle]}>
         <S.ScrollView>
@@ -61,6 +67,7 @@ export default function Home() {
         </S.ScrollView>
       </S.Content>
       <TabBar openMenu={openMenu} />
+      <OnboardModal openModal={openOnboardModal} setOpenModal={setOpenOnboardModal} />
     </S.Container>
   );
 }

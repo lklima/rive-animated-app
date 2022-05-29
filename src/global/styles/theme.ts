@@ -7,6 +7,7 @@ export default {
     subtitle: "rgba(255, 255, 255, 0.5)",
 
     bottomShadow: "rgba(23, 32, 58. 0.3)",
+    shadow: "#25254B",
 
     pink: "#F77D8E",
     blue: "#9CC5FF",
