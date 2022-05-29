@@ -1,18 +1,29 @@
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
 import { BlurView } from "expo-blur";
+import { Dimensions } from "react-native";
+
+const { height } = Dimensions.get("screen");
 
 export const Container = styled(Animated.View)`
   width: 100%;
-  height: 95%;
+  height: ${height - 45}px;
   top: 0;
   position: absolute;
-  flex-direction: row;
-  justify-content: space-between;
   background: white;
   border-radius: 40px;
   z-index: 999;
   overflow: hidden;
+`;
+
+export const InnerContent = styled(Animated.View)`
+  flex: 1;
+  height: ${height - 45}px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 40px;
+  position: absolute;
+  bottom: 0;
 `;
 
 export const Shape = styled.View`

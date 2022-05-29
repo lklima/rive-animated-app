@@ -7,11 +7,12 @@ import Header from "./components/Header";
 import HItem from "./components/HItem";
 import VItem from "./components/VItem";
 import SideBar from "../../components/SideBar";
+import OnboardModal from "./components/OnboardModal";
+import SignInModal from "./components/SignInModal";
 
 import * as S from "./styles";
 
 import { hItems, vItems } from "./utils";
-import OnboardModal from "./components/OnboardModal";
 
 export default function Home() {
   const contentRotateY = useSharedValue(0);
@@ -20,6 +21,7 @@ export default function Home() {
 
   const [openMenu, setOpenMenu] = useState(false);
   const [openOnboardModal, setOpenOnboardModal] = useState(false);
+  const [openSignModal, setOpenSignModal] = useState(false);
 
   useEffect(() => {
     const options = { damping: 14 };
@@ -27,7 +29,8 @@ export default function Home() {
     contentRotateY.value = withSpring(openMenu ? -30 : 0, options);
     contentTranslateX.value = withSpring(openMenu ? 265 : 0, options);
     contentScale.value = withSpring(openMenu ? 0.9 : 1, options);
-  }, [openMenu]);
+    contentScale.value = withSpring(openOnboardModal ? 0.92 : 1, options);
+  }, [openMenu, openOnboardModal]);
 
   const animatedContentSyle = useAnimatedStyle(() => ({
     transform: [
@@ -66,8 +69,14 @@ export default function Home() {
           <S.Empty />
         </S.ScrollView>
       </S.Content>
-      <TabBar openMenu={openMenu} />
-      <OnboardModal openModal={openOnboardModal} setOpenModal={setOpenOnboardModal} />
+      <TabBar openMenu={openMenu || openOnboardModal} />
+      <OnboardModal
+        openModal={openOnboardModal}
+        openSignModal={openSignModal}
+        setOpenModal={setOpenOnboardModal}
+        setOpenSignModal={setOpenSignModal}
+      />
+      <SignInModal openModal={openSignModal} setOpenModal={setOpenSignModal} />
     </S.Container>
   );
 }
