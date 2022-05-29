@@ -22,7 +22,7 @@ export default function TabBar({ openMenu }: Props) {
   const userRef = useRef<RiveRef>(null);
 
   useEffect(() => {
-    contentTranslateY.value = withSpring(openMenu ? 100 : 0);
+    contentTranslateY.value = withSpring(openMenu ? 100 : 0, { damping: 13 });
   }, [openMenu]);
 
   function handlePress(name: string) {

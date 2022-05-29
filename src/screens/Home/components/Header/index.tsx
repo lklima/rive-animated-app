@@ -3,6 +3,7 @@ import Rive, { RiveRef } from "rive-react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { Button, Container, MenuButton } from "./styles";
+import { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 
 interface Props {
   openMenu: boolean;
@@ -10,20 +11,22 @@ interface Props {
 }
 
 export default function Header({ openMenu, setIsOpenMenu }: Props) {
+  const containerTranlateX = useSharedValue(0);
+
   const menuRef = useRef<RiveRef>(null);
 
   function handleOpenMenu() {
-    if (openMenu) {
-      menuRef.current.play("close");
-    } else {
-      menuRef.current.play("open");
-    }
-
+    menuRef.current.play(openMenu ? "close" : "open");
+    containerTranlateX.value = withSpring(openMenu ? 0 : 230, { damping: 14 });
     setIsOpenMenu(!openMenu);
   }
 
+  const containerAnimatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: containerTranlateX.value }],
+  }));
+
   return (
-    <Container>
+    <Container style={containerAnimatedStyle}>
       <MenuButton onPress={handleOpenMenu}>
         <Rive
           ref={menuRef}

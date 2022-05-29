@@ -14,6 +14,7 @@ export default {
     purpleVariant: "#7553F6",
     blueVariant: "#80A4FF",
     stroke: "#6792FF",
+    highlight: "#007AFF",
   },
 
   fonts: {

@@ -7,12 +7,13 @@ interface ButtonProps {
 }
 
 export const Container = styled(Animated.View)`
-  width: 90%;
+  width: 100%;
   position: absolute;
   bottom: 25px;
   align-items: center;
   align-self: center;
   justify-content: center;
+  z-index: 999;
 `;
 
 export const Shadow = styled(LinearGradient).attrs({
@@ -27,7 +28,7 @@ export const Shadow = styled(LinearGradient).attrs({
 
 export const Content = styled.View`
   height: 60px;
-  width: 100%;
+  width: 90%;
   background: ${({ theme }) => theme.colors.primary};
   border-radius: 22px;
   flex-direction: row;

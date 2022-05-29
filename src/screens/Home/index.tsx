@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
-import {
-  useAnimatedStyle,
-  useSharedValue,
-  withSpring,
-  withTiming,
-} from "react-native-reanimated";
+import { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 import { withAnchorPoint } from "react-native-anchor-point";
 
 import TabBar from "../../components/TabBar";
@@ -15,6 +10,7 @@ import VItem from "./components/VItem";
 
 import * as S from "./styles";
 import { hItems, vItems } from "./utils";
+import SideBar from "../../components/SideBar";
 
 export default function Home() {
   const contentRotateY = useSharedValue(0);
@@ -24,9 +20,11 @@ export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    contentRotateY.value = withSpring(openMenu ? -30 : 0);
-    contentTranslateX.value = withSpring(openMenu ? 265 : 0);
-    contentScale.value = withSpring(openMenu ? 0.9 : 1);
+    const options = { damping: 14 };
+
+    contentRotateY.value = withSpring(openMenu ? -30 : 0, options);
+    contentTranslateX.value = withSpring(openMenu ? 265 : 0, options);
+    contentScale.value = withSpring(openMenu ? 0.9 : 1, options);
   }, [openMenu]);
 
   const animatedContentSyle = useAnimatedStyle(() => ({
@@ -36,12 +34,14 @@ export default function Home() {
       { rotateY: `${contentRotateY.value}deg` },
       { translateX: -207 },
       { translateX: contentTranslateX.value },
+      { scale: contentScale.value },
     ],
   }));
 
   return (
     <S.Container>
       <Header openMenu={openMenu} setIsOpenMenu={setOpenMenu} />
+      <SideBar openMenu={openMenu} />
       <S.Content style={[animatedContentSyle]}>
         <S.ScrollView>
           <S.Title>Courses</S.Title>
