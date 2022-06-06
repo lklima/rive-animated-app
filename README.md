@@ -1,4 +1,6 @@
-![Demo](./src/assets/demo.mp4)
+
+https://user-images.githubusercontent.com/44346970/170905698-a5e2bf3b-8bfe-405e-b173-169017c5fe46.mp4
+
 
 # RIVE-ANIMATED-APP
 
