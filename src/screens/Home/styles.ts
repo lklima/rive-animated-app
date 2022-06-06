@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
 
@@ -10,7 +11,7 @@ export const Container = styled.View`
 export const Content = styled(Animated.View)`
   flex: 1;
   background: ${({ theme }) => theme.colors.background};
-  border-radius: 30px;
+  border-radius: ${Platform.OS === "ios" ? 30 : 0}px;
 `;
 
 export const ScrollView = styled.ScrollView`

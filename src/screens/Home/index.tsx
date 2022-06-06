@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FlatList } from "react-native";
+import { FlatList, Platform } from "react-native";
 import { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 
 import TabBar from "../../components/TabBar";
@@ -17,7 +17,7 @@ import { hItems, vItems } from "./utils";
 export default function Home() {
   const contentRotateY = useSharedValue(0);
   const contentTranslateX = useSharedValue(0);
-  const contentScale = useSharedValue(0);
+  const contentScale = useSharedValue(1);
 
   const [openMenu, setOpenMenu] = useState(false);
   const [openOnboardModal, setOpenOnboardModal] = useState(false);
@@ -25,9 +25,10 @@ export default function Home() {
 
   useEffect(() => {
     const options = { damping: 14 };
+    const translateX = Platform.OS === "ios" ? 265 : 220;
 
     contentRotateY.value = withSpring(openMenu ? -30 : 0, options);
-    contentTranslateX.value = withSpring(openMenu ? 265 : 0, options);
+    contentTranslateX.value = withSpring(openMenu ? translateX : 0, options);
     contentScale.value = withSpring(openMenu ? 0.9 : 1, options);
     contentScale.value = withSpring(openOnboardModal ? 0.92 : 1, options);
   }, [openMenu, openOnboardModal]);

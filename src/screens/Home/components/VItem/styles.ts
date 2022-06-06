@@ -14,6 +14,7 @@ export const Container = styled.View<ContainerProps>`
   border-radius: 30px;
   margin-left: 20px;
   margin-bottom: 22px;
+  elevation: 5;
 `;
 
 export const Gradient = styled(LinearGradient)`

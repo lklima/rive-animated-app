@@ -338,8 +338,6 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSVG (12.3.0):
-    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -388,7 +386,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - rive-react-native (from `../node_modules/rive-react-native`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
-  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -483,8 +480,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/rive-react-native"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
-  RNSVG:
-    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -534,7 +529,6 @@ SPEC CHECKSUMS:
   rive-react-native: a23e04ba8052091dbf85f6d34c13f01135e57a1c
   RiveRuntime: e36e481478d5332694427ddbc12cc50ccfa8a1bc
   RNReanimated: 64573e25e078ae6bec03b891586d50b9ec284393
-  RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
 
 PODFILE CHECKSUM: e87141cbe9d8fc0c1d6ba914b81b5494d9dee3b4

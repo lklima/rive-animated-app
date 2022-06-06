@@ -1,7 +1,7 @@
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
 import { BlurView } from "expo-blur";
-import { Dimensions } from "react-native";
+import { Dimensions, Platform } from "react-native";
 
 const { height } = Dimensions.get("screen");
 
@@ -11,7 +11,7 @@ export const Container = styled(Animated.View)`
   top: 0;
   position: absolute;
   background: white;
-  border-radius: 40px;
+  border-radius: ${Platform.OS === "ios" ? 40 : 0}px;
   z-index: 999;
   overflow: hidden;
 `;

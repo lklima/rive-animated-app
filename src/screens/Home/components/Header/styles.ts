@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
 
@@ -17,6 +18,7 @@ export const MenuButton = styled.TouchableOpacity.attrs({ activeOpacity: 0.5 })`
   border-radius: 22px;
   background: white;
   box-shadow: 0 5px 5px rgba(74, 83, 103, 0.2);
+  elevation: 5;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({ activeOpacity: 0.5 })`
@@ -27,4 +29,5 @@ export const Button = styled.TouchableOpacity.attrs({ activeOpacity: 0.5 })`
   border-radius: 22px;
   background: white;
   box-shadow: 0 5px 5px rgba(74, 83, 103, 0.2);
+  elevation: 5;
 `;

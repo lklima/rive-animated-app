@@ -15,6 +15,7 @@ export const Container = styled.View<ContainerProps>`
   flex-direction: row;
   align-items: center;
   background: ${({ color }) => color};
+  elevation: 5;
 `;
 
 export const Content = styled.View`
